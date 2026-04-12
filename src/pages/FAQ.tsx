@@ -57,7 +57,7 @@ export default function FAQ() {
 
         <Accordion type="single" collapsible className="w-full space-y-4">
           {faqs.map((faq, idx) => (
-            <AccordionItem key={idx} value={`item-${idx}`} className="border border-border/50 rounded-2xl px-6 bg-white shadow-sm">
+            <AccordionItem key={idx} value={`item-${idx}`} className="border border-border/50 rounded-2xl px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left font-serif text-lg hover:no-underline py-6">
                 {faq.question}
               </AccordionTrigger>
@@ -72,7 +72,7 @@ export default function FAQ() {
           <h2 className="text-2xl font-serif">Still have questions?</h2>
           <p className="opacity-80">Our team is here to help you with any specific inquiries.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://wa.me/254700000000" className="bg-white text-accent px-8 py-3 rounded-full font-medium hover:bg-white/90 transition-colors">
+            <a href="https://wa.me/254700000000" className="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors">
               Chat on WhatsApp
             </a>
             <a href="/contact" className="border border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-colors">

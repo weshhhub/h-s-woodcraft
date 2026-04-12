@@ -5,24 +5,27 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Cormorant Garamond", serif;
 
-  --color-background: hsl(30 20% 98%);
+  --color-background: hsl(30 5% 92%);
   --color-foreground: hsl(20 10% 10%);
   
   --color-primary: hsl(25 40% 25%);
-  --color-primary-foreground: hsl(30 20% 98%);
+  --color-primary-foreground: hsl(30 5% 92%);
   
-  --color-secondary: hsl(30 15% 90%);
+  --color-secondary: hsl(30 5% 85%);
   --color-secondary-foreground: hsl(25 40% 20%);
   
-  --color-muted: hsl(30 10% 94%);
+  --color-muted: hsl(30 5% 88%);
   --color-muted-foreground: hsl(25 10% 40%);
   
   --color-accent: hsl(35 50% 45%);
-  --color-accent-foreground: hsl(30 20% 98%);
+  --color-accent-foreground: hsl(30 5% 92%);
   
-  --color-border: hsl(25 10% 85%);
-  --color-input: hsl(25 10% 85%);
+  --color-border: hsl(25 5% 80%);
+  --color-input: hsl(25 5% 80%);
   --color-ring: hsl(25 40% 25%);
+  
+  --color-card: hsl(30 5% 94%);
+  --color-card-foreground: hsl(20 10% 10%);
 
   --radius-lg: 1rem;
   --radius-md: calc(1rem - 2px);

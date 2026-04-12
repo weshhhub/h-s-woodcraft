@@ -16,7 +16,7 @@ export default function About() {
             </div>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                H & S Light and Woodcraft began as a small workshop with a simple vision: to create furniture and lighting that tells a story. Founded by master craftsmen who felt the market was saturated with mass-produced, soul-less items, we set out to bring back the art of bespoke production.
+                Furniture by Waweru began as a small workshop with a simple vision: to create furniture and lighting that tells a story. Founded by master craftsmen who felt the market was saturated with mass-produced, soul-less items, we set out to bring back the art of bespoke production.
               </p>
               <p>
                 Based in the heart of Nairobi, our studio has grown from a two-person team to a collective of skilled artisans, designers, and lighting specialists. We combine traditional woodworking techniques with modern electrical engineering to produce pieces that are as safe and functional as they are beautiful.
@@ -35,7 +35,7 @@ export default function About() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-10 -right-10 bg-white p-10 rounded-3xl shadow-xl hidden md:block border border-border/50">
+            <div className="absolute -bottom-10 -right-10 bg-card p-10 rounded-3xl shadow-xl hidden md:block border border-border/50">
               <div className="text-center">
                 <p className="text-5xl font-serif text-accent mb-2">10+</p>
                 <p className="text-sm uppercase tracking-widest opacity-60">Years of Craft</p>
@@ -73,7 +73,7 @@ export default function About() {
               { icon: <Users className="w-8 h-8" />, title: "Collaboration", desc: "We work closely with clients to ensure their vision is perfectly realized." },
               { icon: <ShieldCheck className="w-8 h-8" />, title: "Safety", desc: "Our lighting fixtures meet rigorous safety standards for your peace of mind." }
             ].map((value, idx) => (
-              <div key={idx} className="text-center space-y-4 p-8 border border-border/50 rounded-2xl hover:bg-white hover:shadow-lg transition-all">
+              <div key={idx} className="text-center space-y-4 p-8 border border-border/50 rounded-2xl hover:bg-card hover:shadow-lg transition-all">
                 <div className="w-16 h-16 bg-accent/10 text-accent rounded-full flex items-center justify-center mx-auto">
                   {value.icon}
                 </div>
@@ -91,7 +91,7 @@ export default function About() {
             Whether it's a single lamp or a full office fit-out, we bring the same level of dedication to every project.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="bg-white text-accent hover:bg-white/90 px-10 h-14 rounded-full" asChild>
+            <Button size="lg" className="bg-primary text-white hover:bg-primary/90 px-10 h-14 rounded-full" asChild>
               <Link to="/portfolio">View Our Portfolio</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-10 h-14 rounded-full" asChild>

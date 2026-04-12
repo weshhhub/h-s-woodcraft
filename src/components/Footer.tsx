@@ -8,10 +8,10 @@ export function Footer() {
         <div className="space-y-4">
           <Link to="/" className="flex flex-col">
             <span className="text-2xl font-serif font-bold tracking-tight">
-              H & S LIGHT
+              FURNITURE
             </span>
             <span className="text-xs uppercase tracking-[0.2em] font-sans -mt-1 opacity-80">
-              & WOODCRAFT
+              BY WAWERU
             </span>
           </Link>
           <p className="text-sm opacity-70 leading-relaxed">
@@ -65,7 +65,7 @@ export function Footer() {
       </div>
       
       <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:row justify-between items-center text-xs opacity-50 space-y-4 md:space-y-0">
-        <p>© 2026 H & S Light and Woodcraft. All rights reserved.</p>
+        <p>© 2026 Furniture by Waweru. All rights reserved.</p>
         <div className="flex space-x-6">
           <a href="#" className="hover:underline">Privacy Policy</a>
           <a href="#" className="hover:underline">Terms of Service</a>

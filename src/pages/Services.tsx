@@ -55,7 +55,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="p-10 bg-white rounded-[2rem] border border-border/50 shadow-sm hover:shadow-xl transition-all group"
+              className="p-10 bg-card rounded-[2rem] border border-border/50 shadow-sm hover:shadow-xl transition-all group"
             >
               <div className="text-accent mb-8 group-hover:scale-110 transition-transform duration-300 origin-left">
                 {service.icon}
@@ -84,7 +84,7 @@ export default function Services() {
           <div className="flex flex-wrap justify-center gap-12">
             {sectors.map((sector, idx) => (
               <div key={idx} className="flex flex-col items-center space-y-4">
-                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md text-accent">
+                <div className="w-20 h-20 bg-card rounded-full flex items-center justify-center shadow-md text-accent">
                   {sector.icon}
                 </div>
                 <span className="font-serif text-lg">{sector.name}</span>

@@ -142,7 +142,7 @@ export default function Products() {
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute top-4 right-4">
-                      <span className="bg-white/90 backdrop-blur-sm text-primary text-xs font-medium px-3 py-1 rounded-full">
+                      <span className="bg-card/90 backdrop-blur-sm text-primary text-xs font-medium px-3 py-1 rounded-full">
                         {product.category.toUpperCase()}
                       </span>
                     </div>

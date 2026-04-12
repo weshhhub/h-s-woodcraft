@@ -36,10 +36,10 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex flex-col">
           <span className="text-xl font-serif font-bold tracking-tight text-primary">
-            H & S LIGHT
+            FURNITURE
           </span>
           <span className="text-[10px] uppercase tracking-[0.2em] font-sans -mt-1 opacity-80">
-            & WOODCRAFT
+            BY WAWERU
           </span>
         </Link>
 

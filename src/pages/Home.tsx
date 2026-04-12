@@ -108,7 +108,7 @@ export default function Home() {
               Where Craftsmanship <br /> Meets Artistic Vision
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At H & S Light and Woodcraft, we believe that furniture and lighting are more than just functional items—they are the soul of a space. Our studio specializes in blending the natural warmth of wood with innovative lighting designs to create pieces that are both practical and artistic.
+              At Furniture by Waweru, we believe that furniture and lighting are more than just functional items—they are the soul of a space. Our studio specializes in blending the natural warmth of wood with innovative lighting designs to create pieces that are both practical and artistic.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               From grand chandeliers to minimalist coffee tables, every piece is handcrafted in our Nairobi workshop with a commitment to quality that lasts generations.
@@ -271,7 +271,7 @@ export default function Home() {
             Let's collaborate to create something truly unique for your home or business.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="bg-white text-accent hover:bg-white/90 px-10 h-14 text-lg rounded-full" asChild>
+            <Button size="lg" className="bg-primary text-white hover:bg-primary/90 px-10 h-14 text-lg rounded-full" asChild>
               <Link to="/contact">Get a Free Quote</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-10 h-14 text-lg rounded-full" asChild>
