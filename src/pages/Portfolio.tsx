@@ -45,6 +45,13 @@ const projects = [
     type: "Commercial",
     image: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=1000",
     desc: "Compact furniture solutions and warm ambient lighting for a cozy neighborhood café."
+  },
+  {
+    title: "Luxury Garden Sunroom",
+    location: "Gigiri, Nairobi",
+    type: "Outdoor",
+    image: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&q=80&w=1000",
+    desc: "A bespoke glass-roofed outdoor living space featuring custom cedar beams, integrated lighting, and artisanal furniture."
   }
 ];
 

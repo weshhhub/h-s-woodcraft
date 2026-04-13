@@ -25,7 +25,7 @@ const spaces = [
     title: "Outdoor & Garden",
     icon: <Trees className="w-8 h-8" />,
     description: "Weather-resistant luxury. From architectural gazebos to artisanal garden seating, we extend your living space into nature.",
-    image: "https://images.unsplash.com/photo-1590059393150-137889158913?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&q=80&w=1200",
     categories: ["Gazebos", "Garden Seating", "Poolside", "Pergolas"]
   }
 ];

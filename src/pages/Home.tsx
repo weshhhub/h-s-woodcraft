@@ -13,7 +13,7 @@ const categories = [
   {
     name: "Spaces",
     description: "Tailored solutions for Residential and Commercial environments.",
-    image: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&q=80&w=800",
     href: "/spaces"
   },
   {
