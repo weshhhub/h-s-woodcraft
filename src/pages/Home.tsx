@@ -5,22 +5,22 @@ import { Link } from "react-router-dom";
 
 const categories = [
   {
-    name: "Lighting",
-    description: "Chandeliers, pendant lights, and decorative fixtures.",
+    name: "Collections",
+    description: "Style-based browsing from Minimalist to Industrial Heritage.",
     image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&q=80&w=800",
-    href: "/products?cat=lighting"
+    href: "/collections"
   },
   {
-    name: "Furniture",
-    description: "Dining tables, TV units, and custom woodwork.",
+    name: "Spaces",
+    description: "Tailored solutions for Residential and Commercial environments.",
     image: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&q=80&w=800",
-    href: "/products?cat=furniture"
+    href: "/spaces"
   },
   {
-    name: "Custom Pieces",
-    description: "Unique designs tailored to your specific space.",
+    name: "Materials",
+    description: "Explore our selection of premium timbers and artisanal finishes.",
     image: "https://images.unsplash.com/photo-1611079830811-865ff4428d17?auto=format&fit=crop&q=80&w=800",
-    href: "/products?cat=custom"
+    href: "/materials"
   }
 ];
 
@@ -59,7 +59,7 @@ export default function Home() {
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
@@ -67,7 +67,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-serif mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-serif mb-6 leading-tight drop-shadow-sm"
           >
             Custom Furniture and Lighting <br />
             <span className="italic">Crafted to Transform Your Space</span>
@@ -76,7 +76,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl mb-10 opacity-90 max-w-2xl mx-auto font-sans font-light tracking-wide"
+            className="text-lg md:text-xl mb-10 opacity-100 max-w-2xl mx-auto font-sans font-light tracking-wide text-white/90"
           >
             Bespoke woodwork and artistic lighting solutions for residential and commercial interiors.
           </motion.p>
@@ -86,12 +86,8 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white px-8 h-14 text-lg rounded-full" asChild>
-              <Link to="/products">View Products</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white hover:text-primary px-8 h-14 text-lg rounded-full" asChild>
-              <Link to="/contact">Request a Quote</Link>
-            </Button>
+            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 h-14 text-lg rounded-full shadow-lg" render={<Link to="/products" />}>View Products</Button>
+            <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-md border-white/40 text-white hover:bg-white hover:text-primary px-8 h-14 text-lg rounded-full" render={<Link to="/contact" />}>Request a Quote</Button>
           </motion.div>
         </div>
         
@@ -111,12 +107,10 @@ export default function Home() {
               At Furniture by Waweru, we believe that furniture and lighting are more than just functional items—they are the soul of a space. Our studio specializes in blending the natural warmth of wood with innovative lighting designs to create pieces that are both practical and artistic.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              From grand chandeliers to minimalist coffee tables, every piece is handcrafted in our Nairobi workshop with a commitment to quality that lasts generations.
+              From grand chandeliers and minimalist dining tables to architectural outdoor gazebos, every piece is handcrafted in our Nairobi workshop with a commitment to quality that lasts generations.
             </p>
-            <Button variant="link" className="p-0 text-accent text-lg group" asChild>
-              <Link to="/about">
-                Read Our Story <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+            <Button variant="link" className="p-0 text-accent text-lg group" render={<Link to="/about" />}>
+              Read Our Story <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
           <div className="relative aspect-square">
@@ -138,9 +132,9 @@ export default function Home() {
       <section className="py-24 bg-muted/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-serif">Explore Our Collections</h2>
+            <h2 className="text-4xl md:text-5xl font-serif">Curated Experiences</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Discover our range of handcrafted pieces designed to elevate your living and working environments.
+              Browse our work through the lens of style, environment, or material craftsmanship.
             </p>
           </div>
           
@@ -164,9 +158,7 @@ export default function Home() {
                 <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                   <h3 className="text-3xl font-serif mb-2">{cat.name}</h3>
                   <p className="text-sm opacity-80 mb-6 font-light">{cat.description}</p>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary rounded-full" asChild>
-                    <Link to={cat.href}>Explore Collection</Link>
-                  </Button>
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary rounded-full" render={<Link to={cat.href} />}>View Details</Button>
                 </div>
               </motion.div>
             ))}
@@ -201,9 +193,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-serif">The Crafting Process</h2>
               <p className="opacity-70">From the first sketch to the final installation, we ensure a seamless experience for our clients.</p>
             </div>
-            <Button variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary rounded-full" asChild>
-              <Link to="/services">Learn More About Services</Link>
-            </Button>
+            <Button variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary rounded-full" render={<Link to="/custom-design" />}>Start Your Project</Button>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -264,19 +254,15 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-accent text-white">
+      <section className="py-24 bg-accent text-accent-foreground">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-8">
           <h2 className="text-4xl md:text-6xl font-serif leading-tight">Ready to furnish or light your space?</h2>
           <p className="text-xl opacity-90 font-light">
             Let's collaborate to create something truly unique for your home or business.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="bg-primary text-white hover:bg-primary/90 px-10 h-14 text-lg rounded-full" asChild>
-              <Link to="/contact">Get a Free Quote</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-10 h-14 text-lg rounded-full" asChild>
-              <Link to="/portfolio">View Our Work</Link>
-            </Button>
+            <Button size="lg" className="bg-white text-accent hover:bg-white/90 px-10 h-14 text-lg rounded-full shadow-xl" render={<Link to="/custom-design" />}>Request a Quote</Button>
+            <Button size="lg" variant="outline" className="border-white text-accent-foreground hover:bg-white/20 px-10 h-14 text-lg rounded-full" render={<Link to="/portfolio" />}>View Our Work</Button>
           </div>
         </div>
       </section>

@@ -6,12 +6,12 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "Collections", href: "/collections" },
   { name: "Products", href: "/products" },
-  { name: "Services", href: "/services" },
+  { name: "Spaces", href: "/spaces" },
+  { name: "Materials", href: "/materials" },
+  { name: "Custom Design", href: "/custom-design" },
   { name: "Portfolio", href: "/portfolio" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -26,6 +26,9 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isHomePage = location.pathname === "/";
+  const isTransparent = !isScrolled && isHomePage;
+
   return (
     <nav
       className={cn(
@@ -35,10 +38,16 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex flex-col">
-          <span className="text-xl font-serif font-bold tracking-tight text-primary">
+          <span className={cn(
+            "text-xl font-serif font-bold tracking-tight transition-colors",
+            isTransparent ? "text-white" : "text-primary"
+          )}>
             FURNITURE
           </span>
-          <span className="text-[10px] uppercase tracking-[0.2em] font-sans -mt-1 opacity-80">
+          <span className={cn(
+            "text-[10px] uppercase tracking-[0.2em] font-sans -mt-1 transition-colors",
+            isTransparent ? "text-white/80" : "text-primary/80"
+          )}>
             BY WAWERU
           </span>
         </Link>
@@ -53,13 +62,23 @@ export function Navbar() {
                 "text-sm font-medium transition-colors hover:text-accent",
                 location.pathname === link.href
                   ? "text-accent"
-                  : "text-foreground/80"
+                  : isTransparent ? "text-white/90" : "text-foreground/80"
               )}
             >
               {link.name}
             </Link>
           ))}
-          <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className={cn(
+              "transition-all",
+              isTransparent 
+                ? "border-white text-white hover:bg-white hover:text-primary" 
+                : "border-primary text-primary hover:bg-primary hover:text-white"
+            )}
+            render={<Link to="/custom-design" />}
+          >
             <Phone className="w-4 h-4 mr-2" />
             Inquire
           </Button>
@@ -68,11 +87,11 @@ export function Navbar() {
         {/* Mobile Nav */}
         <div className="md:hidden flex items-center space-x-4">
           <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+            <SheetTrigger render={
+              <Button variant="ghost" size="icon" className={isTransparent ? "text-white" : "text-foreground"}>
                 <Menu className="w-6 h-6" />
               </Button>
-            </SheetTrigger>
+            } />
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background">
               <div className="flex flex-col space-y-6 mt-12">
                 {navLinks.map((link) => (
@@ -89,7 +108,7 @@ export function Navbar() {
                     {link.name}
                   </Link>
                 ))}
-                <Button className="w-full mt-4 bg-primary text-white">
+                <Button className="w-full mt-4 bg-primary text-primary-foreground" render={<Link to="/custom-design" />}>
                   <Phone className="w-4 h-4 mr-2" />
                   Request a Quote
                 </Button>

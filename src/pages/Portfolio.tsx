@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const projects = [
   {
@@ -103,12 +105,12 @@ export default function Portfolio() {
             We have hundreds of completed projects. Follow us on Instagram to see our daily workshop updates and latest installations.
           </p>
           <div className="flex justify-center gap-4">
-            <button className="bg-primary text-white px-8 py-3 rounded-full hover:bg-primary/90 transition-colors">
+            <Button size="lg" className="bg-primary text-primary-foreground rounded-full px-8 h-12" render={<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" />}>
               Follow on Instagram
-            </button>
-            <button className="border border-primary text-primary px-8 py-3 rounded-full hover:bg-primary/5 transition-colors">
-              Request Full Catalog
-            </button>
+            </Button>
+            <Button size="lg" variant="outline" className="border-primary text-primary rounded-full px-8 h-12 hover:bg-primary hover:text-primary-foreground" render={<Link to="/custom-design" />}>
+              Start Your Project
+            </Button>
           </div>
         </section>
       </div>

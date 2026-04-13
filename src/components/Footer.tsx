@@ -25,23 +25,23 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="font-serif text-lg mb-6">Quick Links</h4>
+          <h4 className="font-serif text-lg mb-6">Explore</h4>
           <ul className="space-y-3 text-sm opacity-70">
-            <li><Link to="/products" className="hover:text-accent transition-colors">Our Catalog</Link></li>
-            <li><Link to="/services" className="hover:text-accent transition-colors">Custom Orders</Link></li>
-            <li><Link to="/portfolio" className="hover:text-accent transition-colors">Portfolio</Link></li>
-            <li><Link to="/about" className="hover:text-accent transition-colors">Our Story</Link></li>
-            <li><Link to="/faq" className="hover:text-accent transition-colors">FAQs</Link></li>
+            <li><Link to="/collections" className="hover:text-accent transition-colors">Collections</Link></li>
+            <li><Link to="/products" className="hover:text-accent transition-colors">Catalog</Link></li>
+            <li><Link to="/spaces" className="hover:text-accent transition-colors">Spaces</Link></li>
+            <li><Link to="/materials" className="hover:text-accent transition-colors">Materials</Link></li>
+            <li><Link to="/custom-design" className="hover:text-accent transition-colors">Custom Design</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="font-serif text-lg mb-6">Categories</h4>
+          <h4 className="font-serif text-lg mb-6">Company</h4>
           <ul className="space-y-3 text-sm opacity-70">
-            <li><Link to="/products?cat=lighting" className="hover:text-accent transition-colors">Lighting Fixtures</Link></li>
-            <li><Link to="/products?cat=furniture" className="hover:text-accent transition-colors">Custom Furniture</Link></li>
-            <li><Link to="/products?cat=woodwork" className="hover:text-accent transition-colors">Interior Woodwork</Link></li>
-            <li><Link to="/products?cat=decor" className="hover:text-accent transition-colors">Decorative Pieces</Link></li>
+            <li><Link to="/about" className="hover:text-accent transition-colors">Our Story</Link></li>
+            <li><Link to="/portfolio" className="hover:text-accent transition-colors">Portfolio</Link></li>
+            <li><Link to="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
+            <li><Link to="/faq" className="hover:text-accent transition-colors">FAQs</Link></li>
           </ul>
         </div>
 

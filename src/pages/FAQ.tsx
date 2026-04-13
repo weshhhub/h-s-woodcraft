@@ -68,15 +68,15 @@ export default function FAQ() {
           ))}
         </Accordion>
 
-        <section className="mt-20 p-10 bg-accent text-white rounded-3xl text-center space-y-6">
+        <section className="mt-20 p-10 bg-accent text-accent-foreground rounded-3xl text-center space-y-6">
           <h2 className="text-2xl font-serif">Still have questions?</h2>
           <p className="opacity-80">Our team is here to help you with any specific inquiries.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://wa.me/254700000000" className="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors">
+            <a href="https://wa.me/254700000000" className="bg-white text-accent px-8 py-3 rounded-full font-medium hover:bg-white/90 transition-colors shadow-xl">
               Chat on WhatsApp
             </a>
-            <a href="/contact" className="border border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-colors">
-              Email Us
+            <a href="/custom-design" className="border-white text-accent-foreground px-8 py-3 rounded-full font-medium border hover:bg-white/20 transition-colors">
+              Start Your Project
             </a>
           </div>
         </section>

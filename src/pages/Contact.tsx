@@ -81,11 +81,9 @@ export default function Contact() {
               <CardContent className="p-8 space-y-4">
                 <h3 className="text-xl font-serif">Quick Chat</h3>
                 <p className="text-sm opacity-70">Prefer a quick conversation? Message us directly on WhatsApp for instant inquiries.</p>
-                <Button className="w-full bg-[#25D366] hover:bg-[#25D366]/90 text-white border-none" asChild>
-                  <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-4 h-4 mr-2 fill-current" />
-                    Chat on WhatsApp
-                  </a>
+                <Button className="w-full bg-[#25D366] hover:bg-[#25D366]/90 text-white border-none" render={<a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer" />}>
+                  <MessageCircle className="w-4 h-4 mr-2 fill-current" />
+                  Chat on WhatsApp
                 </Button>
               </CardContent>
             </Card>
@@ -148,7 +146,7 @@ export default function Contact() {
                   onChange={(e) => setFormState({...formState, message: e.target.value})}
                 />
               </div>
-              <Button type="submit" className="w-full md:w-auto bg-accent hover:bg-accent/90 text-white px-12 h-12 rounded-full">
+              <Button type="submit" className="w-full md:w-auto bg-accent hover:bg-accent/90 text-accent-foreground px-12 h-12 rounded-full">
                 <Send className="w-4 h-4 mr-2" />
                 Send Message
               </Button>

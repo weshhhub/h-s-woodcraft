@@ -85,18 +85,14 @@ export default function About() {
         </section>
 
         {/* CTA */}
-        <section className="bg-accent text-white p-12 md:p-20 rounded-[3rem] text-center space-y-8">
+        <section className="bg-accent text-accent-foreground p-12 md:p-20 rounded-[3rem] text-center space-y-8">
           <h2 className="text-4xl md:text-5xl font-serif">Experience the Craftsmanship</h2>
           <p className="text-xl opacity-90 max-w-2xl mx-auto font-light">
             Whether it's a single lamp or a full office fit-out, we bring the same level of dedication to every project.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="bg-primary text-white hover:bg-primary/90 px-10 h-14 rounded-full" asChild>
-              <Link to="/portfolio">View Our Portfolio</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-10 h-14 rounded-full" asChild>
-              <Link to="/contact">Contact Us Today</Link>
-            </Button>
+            <Button size="lg" className="bg-white text-accent hover:bg-white/90 px-10 h-14 rounded-full shadow-xl" render={<Link to="/collections" />}>View Collections</Button>
+            <Button size="lg" variant="outline" className="border-white text-accent-foreground hover:bg-white/20 px-10 h-14 rounded-full" render={<Link to="/custom-design" />}>Start Your Project</Button>
           </div>
         </section>
       </div>
